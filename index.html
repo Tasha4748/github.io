@@ -105,7 +105,39 @@ footer{text-align:center;padding:40px;background:#050505}.phone{font-size:28px;c
 <input name="Address" placeholder="Service Address" required>
 <textarea name="Details" placeholder="Tell us about your cleaning needs..."></textarea>
 <button class="btn" type="submit">SEND APPOINTMENT REQUEST</button>
-</form>
+</for<form action="mailto:ragtimeredzcleaning@gmail.com" method="post" enctype="text/plain">
+  <label for="name">Your Name</label>
+  <input type="text" id="name" name="Name" required>
+
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="Phone" required>
+
+  <label for="email">Email Address</label>
+  <input type="email" id="email" name="Email" required>
+
+  <label for="service">Service Needed</label>
+  <select id="service" name="Service">
+    <option>Residential Cleaning</option>
+    <option>Deep Cleaning</option>
+    <option>Move-In / Move-Out Cleaning</option>
+    <option>Commercial Cleaning</option>
+    <option>Other</option>
+  </select>
+
+  <label for="date">Preferred Date</label>
+  <input type="date" id="date" name="Preferred Date">
+
+  <label for="time">Preferred Time</label>
+  <input type="text" id="time" name="Preferred Time" placeholder="Example: 10:00 AM">
+
+  <label for="address">Service Address</label>
+  <input type="text" id="address" name="Service Address">
+
+  <label for="details">Tell Us About Your Cleaning Needs</label>
+  <textarea id="details" name="Details" rows="5" placeholder="Please include bedrooms, bathrooms, approximate size, and anything special you need cleaned."></textarea>
+
+  <button type="submit">Request an Appointment</button>
+</form>m>
 </div>
 </section>
 
