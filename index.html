@@ -1,153 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ragtime Redz Cleaning Services LLC | Professional Cleaning</title>
- <meta name="description" content="Ragtime Redz Cleaning Services LLC provides professional residential, deep cleaning, move-in and move-out, and commercial cleaning services. Request an appointment today."> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ragtime Redz Cleaning Services LLC | Clean Spaces… Peace of Mind!</title>
+<meta name="description" content="Ragtime Redz Cleaning Services LLC provides residential, deep, move-in/move-out, and commercial cleaning. See our real cleaning results and request an appointment.">
+<meta name="theme-color" content="#0a0a0a">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#0b0b0d;color:white}a{text-decoration:none;color:inherit}
-nav{padding:18px 6%;background:#090909;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5}
-.logo{font-size:24px;font-weight:900}.red{color:#d71938}
-nav a{margin-left:18px;font-weight:bold}
-.hero{padding:100px 7%;background:linear-gradient(135deg,#090909,#8b0c23,#090909)}
-.hero h1{font-size:clamp(45px,8vw,80px);line-height:.95;margin:20px 0}
-.hero p{font-size:21px;max-width:650px}
-.btn{display:inline-block;background:#d71938;color:white;padding:15px 23px;border-radius:8px;font-weight:bold;margin:8px 8px 0 0}
-.white{background:white;color:#111}.section{padding:70px 7%}.wrap{max-width:1100px;margin:auto}
-h2{font-size:40px;text-transform:uppercase}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{padding:25px;border-radius:14px;background:#18181c;border:1px solid #333}.card h3{color:#ed173b}
-.light{background:#f5f5f5;color:#111}.light .card{background:white;border:1px solid #ddd}
-.price{font-size:30px;font-weight:900}
-form{display:grid;gap:14px;max-width:750px}input,select,textarea{padding:14px;border-radius:7px;border:1px solid #aaa;font-size:16px}textarea{min-height:130px}
-.hours{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}.hour{padding:20px;border-left:5px solid #d71938;background:#18181c}
-footer{text-align:center;padding:40px;background:#050505}.phone{font-size:28px;color:#ed173b;font-weight:bold}
-@media(max-width:700px){nav{display:block}nav a{display:inline-block;margin:12px 10px 0 0}}
+:root {
+  --red:#e10600; --red2:#ff2b20; --black:#070707; --ink:#111;
+  --silver:#d9d9d9; --white:#fff; --muted:#b9b9b9; --card:#141414;
+  --line:rgba(255,255,255,.12);
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0; font-family:Arial,Helvetica,sans-serif; background:var(--black);
+  color:var(--white); line-height:1.6;
+}
+a { color:inherit; text-decoration:none; }
+.container { width:min(1160px,92%); margin:auto; }
+header {
+  position:sticky; top:0; z-index:20; background:rgba(7,7,7,.94);
+  backdrop-filter:blur(12px); border-bottom:1px solid var(--line);
+}
+.nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:22px; }
+.brand img { width:185px; display:block; }
+nav { display:flex; gap:24px; align-items:center; }
+nav a { font-weight:800; font-size:.9rem; text-transform:uppercase; letter-spacing:.05em; }
+nav a:hover { color:#ff332b; }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  background:linear-gradient(135deg,var(--red),#9e0000); color:#fff; padding:14px 22px;
+  border-radius:999px; font-weight:900; border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 10px 28px rgba(225,6,0,.22);
+}
+.btn.alt { background:#fff; color:#111; box-shadow:none; }
+.hero {
+  min-height:720px; display:grid; place-items:center; position:relative; overflow:hidden;
+  background:
+    radial-gradient(circle at 75% 25%, rgba(225,6,0,.26), transparent 32%),
+    radial-gradient(circle at 15% 70%, rgba(255,255,255,.08), transparent 26%),
+    linear-gradient(115deg,#050505 0%,#111 48%,#080808 100%);
+}
+.hero:after {
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(90deg,rgba(0,0,0,.2),transparent 55%,rgba(225,6,0,.08));
+}
+.hero-grid { position:relative; z-index:2; display:grid; grid-template-columns:1.05fr .95fr; gap:42px; align-items:center; padding:70px 0; }
+.hero-logo { width:min(520px,100%); margin-bottom:15px; filter:drop-shadow(0 20px 35px rgba(0,0,0,.55)); }
+.kicker { color:#ff3a32; font-weight:900; text-transform:uppercase; letter-spacing:.18em; font-size:.8rem; }
+h1 { font-size:clamp(2.7rem,6vw,5.5rem); line-height:.95; margin:12px 0 18px; text-transform:uppercase; }
+h1 span { color:#ff2b20; }
+.lead { font-size:1.18rem; color:#ddd; max-width:650px; }
+.actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+.hero-proof { background:rgba(255,255,255,.06); border:1px solid var(--line); border-radius:28px; padding:18px; box-shadow:0 24px 60px rgba(0,0,0,.3); }
+.hero-proof img { width:100%; height:470px; object-fit:cover; border-radius:20px; display:block; }
+.proof-label { display:flex; justify-content:space-between; gap:12px; padding:13px 4px 0; font-weight:900; }
+section { padding:88px 0; }
+.section-head { max-width:780px; margin-bottom:38px; }
+.eyebrow { color:#ff3028; font-weight:900; text-transform:uppercase; letter-spacing:.16em; font-size:.78rem; }
+h2 { font-size:clamp(2rem,4vw,3.4rem); line-height:1.05; margin:8px 0 12px; }
+.section-head p { color:#c9c9c9; }
+.services { background:#0d0d0d; }
+.service-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.service { background:linear-gradient(145deg,#171717,#0f0f0f); border:1px solid var(--line); border-radius:22px; padding:24px; min-height:205px; }
+.icon { width:50px;height:50px;border-radius:16px;display:grid;place-items:center;background:#190b0b;border:1px solid rgba(255,40,30,.4);font-size:1.5rem; }
+.service h3 { margin:15px 0 8px; }
+.service p { color:#aaa; margin:0; }
+.results { background:#070707; }
+.work-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.work-card { margin:0; background:#111; border:1px solid var(--line); border-radius:20px; overflow:hidden; }
+.work-card img { width:100%; height:290px; object-fit:cover; display:block; }
+.work-card figcaption { padding:13px 15px; font-weight:800; color:#eee; }
+.callout {
+  margin-top:30px; padding:30px; border-radius:24px;
+  background:linear-gradient(110deg,#260606,#110909 55%,#171717);
+  border:1px solid rgba(255,255,255,.12); display:flex; justify-content:space-between;
+  gap:25px; align-items:center;
+}
+.hours-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.info-card { background:#121212; border:1px solid var(--line); border-radius:24px; padding:28px; }
+.info-card p,.info-card li { color:#c9c9c9; }
+ul.clean { list-style:none; padding:0; margin:0; }
+ul.clean li { padding:8px 0; border-bottom:1px solid var(--line); }
+.form-wrap { display:grid; grid-template-columns:.85fr 1.15fr; gap:25px; align-items:start; }
+form { background:#111; border:1px solid var(--line); border-radius:24px; padding:28px; }
+label { display:block; font-weight:800; margin:13px 0 6px; }
+input,select,textarea {
+  width:100%; background:#080808; color:#fff; border:1px solid #343434; border-radius:12px;
+  padding:13px 14px; font:inherit; outline:none;
+}
+input:focus,select:focus,textarea:focus { border-color:#f22; box-shadow:0 0 0 3px rgba(225,6,0,.12); }
+textarea { min-height:130px; resize:vertical; }
+.form-note { color:#999; font-size:.88rem; }
+footer { background:#030303; border-top:1px solid var(--line); padding:38px 0; }
+.footer-grid { display:flex; justify-content:space-between; gap:20px; align-items:center; }
+.footer-logo { width:210px; }
+.small { color:#929292; font-size:.9rem; }
+@media(max-width:900px) {
+  nav { display:none; }
+  .hero-grid,.form-wrap,.hours-grid { grid-template-columns:1fr; }
+  .service-grid { grid-template-columns:repeat(2,1fr); }
+  .work-grid { grid-template-columns:repeat(2,1fr); }
+  .hero { min-height:auto; }
+}
+@media(max-width:560px) {
+  .brand img { width:150px; }
+  .service-grid,.work-grid { grid-template-columns:1fr; }
+  .hero-proof img { height:360px; }
+  .callout,.footer-grid { flex-direction:column; align-items:flex-start; }
+}
 </style>
 </head>
-
 <body>
-
-<nav>
-<div class="logo">RAGTIME <span class="red">REDZ</span></div>
-<div>
-<a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
-<a href="#hours">Hours</a>
-<a href="#appointment">Appointments</a>
-</div>
-</nav>
-
-<header class="hero">
-<div class="wrap">
-<div class="logo">RAGTIME <span class="red">REDZ</span> CLEANING SERVICES LLC</div>
-<h1>Clean Spaces.<br><span class="red">Peace of Mind.</span></h1>
-<p>Reliable • Professional • Affordable cleaning services for homes, offices, move-ins, move-outs and more.</p>
-<a class="btn" href="#appointment">REQUEST AN APPOINTMENT</a>
-<a class="btn white" href="tel:4474460508">CALL 447-446-0508</a>
-</div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top"><img src="images/ragtime-redz-logo.png" alt="Ragtime Redz Cleaning Services LLC logo"></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#results">Our Work</a>
+      <a href="#hours">Hours</a>
+      <a href="#book">Book</a>
+    </nav>
+    <a class="btn" href="tel:4474460508">Call Now</a>
+  </div>
 </header>
 
-<section class="section" id="services">
-<div class="wrap">
-<h2>Our Services</h2>
-<div class="grid">
-<div class="card"><h3>Residential Cleaning</h3><p>Routine cleaning for kitchens, bathrooms, bedrooms and living areas.</p></div>
-<div class="card"><h3>Deep Cleaning</h3><p>Detailed cleaning for spaces that need extra attention.</p></div>
-<div class="card"><h3>Move-In / Move-Out</h3><p>Detailed cleaning before moving in or after moving out.</p></div>
-<div class="card"><h3>Commercial Cleaning</h3><p>Cleaning services for offices and commercial spaces.</p></div>
-</div>
-</div>
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Residential • Commercial • Deep Cleaning</div>
+      <img class="hero-logo" src="images/ragtime-redz-logo.png" alt="Ragtime Redz Cleaning Services LLC">
+      <h1>We don't just clean.<br><span>We transform.</span></h1>
+      <p class="lead">Your home or business should look great, feel fresh, and give you peace of mind. Ragtime Redz brings the detail, care, and pride your space deserves.</p>
+      <div class="actions">
+        <a class="btn" href="#book">Request an Appointment</a>
+        <a class="btn alt" href="tel:4474460508">📞 447-446-0508</a>
+      </div>
+    </div>
+    <div class="hero-proof">
+      <img src="images/work-13.jpg" alt="Ragtime Redz cleaning result">
+      <div class="proof-label"><span>REAL WORK. REAL RESULTS.</span><span>✨</span></div>
+    </div>
+  </div>
 </section>
 
-<section class="section light" id="pricing">
-<div class="wrap">
-<h2>Pricing</h2>
-<div class="grid">
-<div class="card"><h3>Standard Cleaning</h3><div class="price">$75+</div><p>Starting price based on home size and condition.</p></div>
-<div class="card"><h3>Deep Cleaning</h3><div class="price">$110+</div><p>Detailed cleaning based on the size and condition of the space.</p></div>
-<div class="card"><h3>Move-In / Move-Out</h3><div class="price">$120+</div><p>Pricing varies by bedrooms, bathrooms and condition.</p></div>
-<div class="card"><h3>Commercial</h3><div class="price">$75+</div><p>Pricing varies by square footage and service needs.</p></div>
-</div>
-<p><small>Prices shown are starting prices and may vary. Contact us for a customized quote.</small></p>
-</div>
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What we do</div>
+      <h2>From everyday clean to serious transformation.</h2>
+      <p>Whether you need a fresh home, a deep reset, a move-out clean, or a polished business space, we focus on the details that make a room feel completely different.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service"><div class="icon">🏠</div><h3>Residential Cleaning</h3><p>Comfortable, fresh spaces you can feel good coming home to.</p></article>
+      <article class="service"><div class="icon">✨</div><h3>Deep Cleaning</h3><p>Extra attention to buildup, detail areas, appliances, and the places that get overlooked.</p></article>
+      <article class="service"><div class="icon">📦</div><h3>Move-In / Move-Out</h3><p>Help leave a space ready for the next chapter or make your new place feel like home.</p></article>
+      <article class="service"><div class="icon">🏢</div><h3>Commercial Cleaning</h3><p>A cleaner business space can create a better first impression for customers and clients.</p></article>
+    </div>
+  </div>
 </section>
 
-<section class="section" id="hours">
-<div class="wrap">
-<h2>Business Hours</h2>
-<div class="hours">
-<div class="hour"><b>Monday – Saturday</b><br>9:00 AM – 5:00 PM</div>
-<div class="hour"><b>Sunday</b><br>By appointment only</div>
-<div class="hour"><b>Late Hours</b><br>By appointment only</div>
-</div>
-</div>
+<section class="results" id="results">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Real Ragtime Redz work</div>
+      <h2>See the Ragtime Redz difference.</h2>
+      <p>These are real cleaning jobs from Ragtime Redz—not stock photos. We are building the site around the results you have already delivered.</p>
+    </div>
+    <div class="work-grid">
+      <figure class="work-card"><img src="images/work-01.jpg" alt="Carpet and floor refresh" loading="lazy"><figcaption>Carpet and floor refresh</figcaption></figure>
+<figure class="work-card"><img src="images/work-02.jpg" alt="Room transformation" loading="lazy"><figcaption>Room transformation</figcaption></figure>
+<figure class="work-card"><img src="images/work-03.jpg" alt="Exterior cleanup" loading="lazy"><figcaption>Exterior cleanup</figcaption></figure>
+<figure class="work-card"><img src="images/work-04.jpg" alt="Kitchen transformation" loading="lazy"><figcaption>Kitchen transformation</figcaption></figure>
+<figure class="work-card"><img src="images/work-05.jpg" alt="Kitchen deep-clean result" loading="lazy"><figcaption>Kitchen deep-clean result</figcaption></figure>
+<figure class="work-card"><img src="images/work-06.jpg" alt="Heavy-clean transformation" loading="lazy"><figcaption>Heavy-clean transformation</figcaption></figure>
+<figure class="work-card"><img src="images/work-07.jpg" alt="Closet cleanup" loading="lazy"><figcaption>Closet cleanup</figcaption></figure>
+<figure class="work-card"><img src="images/work-08.jpg" alt="Living room refresh" loading="lazy"><figcaption>Living room refresh</figcaption></figure>
+<figure class="work-card"><img src="images/work-09.jpg" alt="Carpet cleaning" loading="lazy"><figcaption>Carpet cleaning</figcaption></figure>
+<figure class="work-card"><img src="images/work-10.jpg" alt="Bedroom refresh" loading="lazy"><figcaption>Bedroom refresh</figcaption></figure>
+<figure class="work-card"><img src="images/work-11.jpg" alt="Kitchen and living space" loading="lazy"><figcaption>Kitchen and living space</figcaption></figure>
+<figure class="work-card"><img src="images/work-12.jpg" alt="Bathroom transformation" loading="lazy"><figcaption>Bathroom transformation</figcaption></figure>
+<figure class="work-card"><img src="images/work-13.jpg" alt="Sink deep cleaning" loading="lazy"><figcaption>Sink deep cleaning</figcaption></figure>
+<figure class="work-card"><img src="images/work-14.jpg" alt="Refrigerator deep cleaning" loading="lazy"><figcaption>Refrigerator deep cleaning</figcaption></figure>
+<figure class="work-card"><img src="images/work-15.jpg" alt="Detailed appliance cleaning" loading="lazy"><figcaption>Detailed appliance cleaning</figcaption></figure>
+<figure class="work-card"><img src="images/work-16.jpg" alt="Home reset" loading="lazy"><figcaption>Home reset</figcaption></figure>
+<figure class="work-card"><img src="images/work-17.jpg" alt="Detail cleaning" loading="lazy"><figcaption>Detail cleaning</figcaption></figure>
+    </div>
+    <div class="callout">
+      <div><h3 style="margin:0 0 6px;font-size:1.5rem">Ready for your space to look this good?</h3><div class="small">Tell us what you need cleaned and we'll talk through the next step.</div></div>
+      <a class="btn" href="#book">Request an Appointment</a>
+    </div>
+  </div>
 </section>
 
-<section class="section light" id="appointment">
-<div class="wrap">
-<h2>Request an Appointment</h2>
-<p>Fill out the form below and we'll follow up to confirm your appointment.</p>
-
-<form action="https://formspree.io/f/xzezoynz" method="POST">
-<input name="Name" placeholder="Your Name" required>
-<input name="Phone" placeholder="Phone Number" required>
-<input name="Email" type="email" placeholder="Email Address">
-<select name="Service" required>
-<option value="">Choose a Service</option>
-<option>Residential Cleaning</option>
-<option>Deep Cleaning</option>
-<option>Move-In / Move-Out</option>
-<option>Commercial Cleaning</option>
-<option>Custom Quote</option>
-</select>
-<input name="Date" type="date" required>
-<input name="Time" type="time" required>
-<input name="Address" placeholder="Service Address" required>
-<textarea name="Details" placeholder="Tell us about your cleaning needs..."></textarea>
-<button class="btn" type="submit">SEND APPOINTMENT REQUEST</button>
-</for<form action="mailto:ragtimeredzcleaning@gmail.com" method="post" enctype="text/plain">
-  <label for="name">Your Name</label>
-  <input type="text" id="name" name="Name" required>
-
-  <label for="phone">Phone Number</label>
-  <input type="tel" id="phone" name="Phone" required>
-
-  <label for="email">Email Address</label>
-  <input type="email" id="email" name="email">
-
-  <label for="service">Service Needed</label>
-  <select id="service" name="Service">
-    <option>Residential Cleaning</option>
-    <option>Deep Cleaning</option>
-    <option>Move-In / Move-Out Cleaning</option>
-    <option>Commercial Cleaning</option>
-    <option>Other</option>
-  </select>
-
-  <label for="date">Preferred Date</label>
-  <input type="date" id="date" name="Preferred Date">
-
-  <label for="time">Preferred Time</label>
-  <input type="text" id="time" name="Preferred Time" placeholder="Example: 10:00 AM">
-
-  <label for="address">Service Address</label>
-  <input type="text" id="address" name="Service Address">
-
-  <label for="details">Tell Us About Your Cleaning Needs</label>
-  <textarea id="details" name="Details" rows="5" placeholder="Please include bedrooms, bathrooms, approximate size, and anything special you need cleaned."></textarea>
-
-  <button type="submit">Request an Appointment</button>
-</form>m>
-</div>
+<section id="hours">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">When we're available</div>
+      <h2>Cleaning that fits your schedule.</h2>
+    </div>
+    <div class="hours-grid">
+      <div class="info-card">
+        <h3>Business Hours</h3>
+        <ul class="clean">
+          <li><strong>Monday – Saturday:</strong> 9:00 AM – 5:00 PM</li>
+          <li><strong>Sunday:</strong> By appointment only</li>
+          <li><strong>Late hours:</strong> By appointment only</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>Service Area</h3>
+        <p>We serve customers in our service-area communities and surrounding areas.</p>
+        <p><strong>Ask about your location when you request an appointment.</strong></p>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section id="book">
+  <div class="container form-wrap">
+    <div class="section-head">
+      <div class="eyebrow">Let's get started</div>
+      <h2>Tell us what you need cleaned.</h2>
+      <p>Use the appointment request form and we'll receive your request directly.</p>
+      <p><strong>Phone:</strong> <a href="tel:4474460508">447-446-0508</a><br>
+      <strong>Email:</strong> <a href="mailto:ragtimeredzcleaning@gmail.com">ragtimeredzcleaning@gmail.com</a></p>
+      <p class="form-note">Appointment requests are requests for scheduling; your date/time is confirmed after we respond.</p>
+    </div>
+
+    <form action="https://formspree.io/f/xzezoynz" method="POST">
+      <label for="name">Name *</label>
+      <input id="name" name="name" required>
+
+      <label for="phone">Phone *</label>
+      <input id="phone" name="phone" type="tel" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email">
+
+      <label for="service">Service *</label>
+      <select id="service" name="service" required>
+        <option value="">Choose a service</option>
+        <option>Residential Cleaning</option>
+        <option>Deep Cleaning</option>
+        <option>Move-In / Move-Out</option>
+        <option>Commercial Cleaning</option>
+        <option>Other / Not Sure</option>
+      </select>
+
+      <label for="date">Preferred Date</label>
+      <input id="date" name="preferred_date" type="date">
+
+      <label for="time">Preferred Time</label>
+      <input id="time" name="preferred_time" type="text" placeholder="Example: 10 AM – 1 PM">
+
+      <label for="address">Service Address *</label>
+      <input id="address" name="service_address" required>
+
+      <label for="details">Tell us about the job</label>
+      <textarea id="details" name="details" placeholder="Rooms, size, special requests, or anything you want us to know."></textarea>
+
+      <button class="btn" type="submit" style="width:100%;margin-top:18px;border:0;cursor:pointer">Send Appointment Request</button>
+    </form>
+  </div>
+</section>
+</main>
 
 <footer>
-<div class="phone">447-446-0508</div>
-<p>Ragtime Redz Cleaning Services LLC</p>
-<p>Clean Spaces • Peace of Mind</p>
-<p>ragtimeredzcleaning@gmail.com</p>
+  <div class="container footer-grid">
+    <img class="footer-logo" src="images/ragtime-redz-logo.png" alt="Ragtime Redz Cleaning Services LLC">
+    <div class="small">© 2026 Ragtime Redz Cleaning Services LLC • Clean Spaces… Peace of Mind!</div>
+    <a class="btn" href="tel:4474460508">Call 447-446-0508</a>
+  </div>
 </footer>
-
 </body>
 </html>
